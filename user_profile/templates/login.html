@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+    
+    <form method="POST" class="w-50 m-auto">
+        <h1>Login Form</h1>
+        {% csrf_token %}
+        {{form.as_p}}
+        <button
+            type="submit"
+            class="btn btn-primary"
+        >
+            Submit
+        </button>
+       <p>Have no account . <a class="nav-link btn btn-outline-primary me-2" href="{% url 'register' %}">Register</a></p>
+    </form>
+{% endblock content %}
+        
